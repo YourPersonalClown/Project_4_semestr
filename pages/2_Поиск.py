@@ -76,28 +76,7 @@ if st.sidebar.button('Поиск', key = 'search_button_1'):
             
 
 
-        # with open('K:\Downloads\Загрузки Яндекс\map.geojson', 'r') as temp:
-        #     loaded = json.loads(temp.read())['features']
-
-        # loaded = loaded[::-1]
-
-        # for line in loaded:
-        #     line = [points[::-1] for points in line['geometry']['coordinates']]
-
-        #     folium.PolyLine(line).add_to(map)
-        #     folium.Marker(line[0]).add_to(map)
-        #     folium.Marker(line[-1]).add_to(map)
-
-
-
-        # folium.PolyLine([point[::-1] for point in way_got['coordinates']]).add_to(map)
-
-        # print(way_got['coordinates'])
-
-        # # Нарисуйте точки на карте
-        # for coord in coordinates:
-        #     folium.Marker(coord).add_to(map)
-
+       
         # Выведите карту на экран
         sf.folium_static(map)
 
