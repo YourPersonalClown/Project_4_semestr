@@ -9,7 +9,7 @@ from DB_work import *
 
 
 
-st.set_page_config(page_title='ТЕСТ',page_icon=":bar_chart",layout="wide")
+st.set_page_config(page_title='Поиск',page_icon=":bar_chart",layout="wide")
 
 hide_streamlit_style = """
             <style>
@@ -34,7 +34,7 @@ START_COORDINATES = (52.2978, 104.296)
 # query = "SELECT * FROM test_table where Route = 0"
 
 route_number = st.sidebar.number_input('Номер маршрута', min_value = 0, max_value = 9999, value = 0 if 'route_number' not in st.session_state else st.session_state.route_number)
-route_type = st.sidebar.select_slider('Тип транспорта', ['Автобус', 'Трамвай', 'Троллейбус'], value = 'Автобус' if 'route_type' not in st.session_state else st.session_state.route_type)
+route_type = st.sidebar.selectbox('Тип транспорта', ['Автобус', 'Трамвай', 'Троллейбус'],)
 
 if st.sidebar.button('Поиск', key = 'search_button_1'):
     st.session_state.update({  'route_type': route_type, 'route_number': route_number})
